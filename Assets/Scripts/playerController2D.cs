@@ -56,13 +56,13 @@ public class playerController2D : MonoBehaviour {
             isOnWallRight = false;
         }
 
-        if ((Input.GetKey ("d") || Input.GetKey ("right")) && !isOnWallRight) {
+        if ((Input.GetKey ("d") || Input.GetKey ("right")) && !isOnWallRight && isGrounded) {
             rb2d.velocity = new Vector2 (runSpeed, rb2d.velocity.y);
             if (isGrounded == true) {
                 animator.Play ("playerRun");
             }
             spriteRenderer.flipX = false;
-        } else if ((Input.GetKey ("a") || Input.GetKey ("left")) && !isOnWallLeft) {
+        } else if ((Input.GetKey ("a") || Input.GetKey ("left")) && !isOnWallLeft && isGrounded) {
             rb2d.velocity = new Vector2 (-runSpeed, rb2d.velocity.y);
             if (isGrounded == true) {
                 animator.Play ("playerRun");
@@ -110,6 +110,14 @@ public class playerController2D : MonoBehaviour {
 
         if (rb2d.velocity.y <= -15) {
             rb2d.velocity = new Vector2 (rb2d.velocity.x, -15);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Fruit"))
+        {
+            Destroy(other.gameObject);
         }
     }
 
