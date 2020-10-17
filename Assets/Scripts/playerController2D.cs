@@ -9,6 +9,7 @@ public class playerController2D : MonoBehaviour {
     Animator animator;
     Rigidbody2D rb2d;
     SpriteRenderer spriteRenderer;
+    public AudioSource fruitGet;
 
     bool isGrounded;
     bool isOnWallLeft;
@@ -57,13 +58,21 @@ public class playerController2D : MonoBehaviour {
         }
 
         if ((Input.GetKey ("d") || Input.GetKey ("right")) && !isOnWallRight && isGrounded) {
-            rb2d.velocity = new Vector2 (runSpeed, rb2d.velocity.y);
+            rb2d.velocity = new Vector2 (rb2d.velocity.x + 0.5f, rb2d.velocity.y);
+            if (rb2d.velocity.x > 6f)
+            {
+                rb2d.velocity = new Vector2 (6f, rb2d.velocity.y);
+            }
             if (isGrounded == true) {
                 animator.Play ("playerRun");
             }
             spriteRenderer.flipX = false;
         } else if ((Input.GetKey ("a") || Input.GetKey ("left")) && !isOnWallLeft && isGrounded) {
-            rb2d.velocity = new Vector2 (-runSpeed, rb2d.velocity.y);
+            rb2d.velocity = new Vector2 (rb2d.velocity.x - 0.5f, rb2d.velocity.y);
+            if (rb2d.velocity.x < -6f)
+            {
+                rb2d.velocity = new Vector2 (-6f, rb2d.velocity.y);
+            }
             if (isGrounded == true) {
                 animator.Play ("playerRun");
             }
@@ -118,6 +127,7 @@ public class playerController2D : MonoBehaviour {
         if (other.gameObject.CompareTag("Fruit"))
         {
             Destroy(other.gameObject);
+            fruitGet.Play();
         }
     }
 
