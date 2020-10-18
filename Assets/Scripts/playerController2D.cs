@@ -120,6 +120,10 @@ public class playerController2D : MonoBehaviour {
         if (rb2d.velocity.y <= -15) {
             rb2d.velocity = new Vector2 (rb2d.velocity.x, -15);
         }
+        if (Input.GetKey("escape"))
+        {
+            Application.Quit();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)

@@ -1103,7 +1103,9 @@ MonoBehaviour:
   m_Text: 'GAME OVER
 
 
-    PRESS ENTER'
+    PRESS ENTER TO RETRY
+
+    PRESS ESC TO QUIT'
 --- !u!222 &239112144
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1588,7 +1590,9 @@ MonoBehaviour:
   m_Text: 'YOU WIN!
 
 
-    PRESS ENTER TO PLAY AGAIN'
+    PRESS ENTER TO PLAY AGAIN
+
+    PRESS ESC TO QUIT'
 --- !u!222 &431961208
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16231,8 +16235,8 @@ Tilemap:
   - first: {x: 31, y: -3, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileIndex: 2
+      m_TileSpriteIndex: 34
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -20921,9 +20925,9 @@ Tilemap:
   m_TileAssetArray:
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 9db26bf5bea4ee54c8ceed7ff44ec664, type: 2}
-  - m_RefCount: 43
+  - m_RefCount: 42
     m_Data: {fileID: 11400000, guid: adcb1353c2bb97049a828652f8cdb50b, type: 2}
-  - m_RefCount: 1
+  - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 08d824f0e1fa30f46b696c2dd9ac4dfb, type: 2}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 0e6f26f740e39bd4dafcd6edf45de48f, type: 2}
@@ -21053,7 +21057,7 @@ Tilemap:
   - m_RefCount: 6
     m_Data: {fileID: -5930776587842900371, guid: fc584d329b77b9545b9c9c8bb829e553,
       type: 3}
-  - m_RefCount: 43
+  - m_RefCount: 42
     m_Data: {fileID: -7517053698926566003, guid: fc584d329b77b9545b9c9c8bb829e553,
       type: 3}
   - m_RefCount: 4
@@ -21149,7 +21153,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: -8620202154233844528, guid: fc584d329b77b9545b9c9c8bb829e553,
       type: 3}
-  - m_RefCount: 1
+  - m_RefCount: 2
     m_Data: {fileID: 3020870990670601969, guid: fc584d329b77b9545b9c9c8bb829e553,
       type: 3}
   - m_RefCount: 19
@@ -21409,6 +21413,20 @@ CompositeCollider2D:
       - X: 620000000
         Y: -10000000
     - - X: 320000000
+        Y: -30000100
+      - X: 320000041
+        Y: -30000100
+      - X: 320000100
+        Y: -30000041
+      - X: 320000100
+        Y: -19999959
+      - X: 320000041
+        Y: -19999900
+      - X: 309999959
+        Y: -19999900
+      - X: 309999900
+        Y: -19999959
+      - X: 309999900
         Y: -20000000
       - X: 230000000
         Y: -20000000
@@ -21549,7 +21567,7 @@ CompositeCollider2D:
       - {x: 54, y: -0.000029300001}
       - {x: 54.000034, y: -1}
     - - {x: 31.999971, y: -21}
-      - {x: 31.999971, y: -2}
+      - {x: 31.999975, y: -1.99999}
       - {x: 23, y: -1.9999707}
       - {x: 22.999971, y: 6}
       - {x: 20, y: 5.999971}
