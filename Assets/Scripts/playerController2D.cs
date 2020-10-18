@@ -128,6 +128,7 @@ public class playerController2D : MonoBehaviour {
         {
             Destroy(other.gameObject);
             fruitGet.Play();
+            ScoreScript.scoreValue += 100;
         }
     }
 
