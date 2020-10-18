@@ -25,7 +25,8 @@ Press Esc at any time to quit.
 
 # Execution
 
-To run: Double-Click 'SupeRun.exe'
+To run: Double-Click 'SupeRun.exe'<br>
+Please make sure you have the most recent version of the Visual C++ redistributable runtime package or the program may not run.
 
 
 # Useful Websites
